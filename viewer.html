@@ -91,6 +91,49 @@
                                         page.insertAdjacentElement("beforeend", label);
                                     }
                                 }
+                                
+                                var action = pages[j].getElementsByTagName("action");
+                                        if(action != null) {
+                                            var keys = action[0].getElementsByTagName("key");
+                                            if((keys != null) && (keys.length > 0))
+                                            {
+                                                // make Key
+                                                var keyBase = document.createElement("div");
+                                                keyBase.setAttribute("id", "keyBase");
+                                                keyBase.setAttribute("style", "position:absolute; bottom: 0px; left: 0px; width: 240px; height:30px; background-color:black;");
+                                                page.insertAdjacentElement("beforeend", keyBase);
+
+                                                var museKey = document.getElementById("keyBase");
+
+                                                for(n = 0; n < keys.length; n++) {
+                                                    keyLabel = keys[n].getElementsByTagName("keyLabel");
+                                                    if(parseInt(keyLabel[0].getAttribute("hide")) == 0)
+                                                    {
+                                                        var key = document.createElement("div");
+                                                        var style = "position:absolute; top: 4px; width: 49px; height:22px; text-align: center; vertical-align: middle; "
+                                                        switch(parseInt(keys[n].getAttribute("vk"))) {
+                                                            case 132:
+                                                                style += "left: 7px; background-color:#FF2020;";
+                                                                break;
+                                                            case 112:
+                                                                style += "left: 66px; background-color:#2010FF;";
+                                                                break;
+                                                            case 113:
+                                                                style += "left: 125px; background-color:#10C010;";
+                                                                break;
+                                                            case 133:
+                                                                style += "left: 184px; background-color:#FFFF00;";
+                                                                break;
+                                                        }
+
+                                                        key.setAttribute("style", style);
+                                                        key.insertAdjacentText("afterbegin", keyLabel[0].getAttribute("text"));
+
+                                                        museKey.insertAdjacentElement("beforeend", key);
+                                                    }
+                                                }
+                                            }
+                                        }
                             }
                         }
                     }
