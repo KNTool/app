@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <layout topPage="page1" backcolor="FFF0F0F0" arrow="1">
+    <page id="page1" display="トップページ" location="0191018F" minimum="1" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page15" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="ﾃﾞｰﾀ" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="16" conditions="0">
+          <result back="0">
+            <success page="page17" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="設 定" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="16" conditions="0">
+          <result back="0">
+            <success page="page22" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="履 歴" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="272" option="key4_action" conditions="0">
+          <result back="0">
+            <success page="page9" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="検 針" textsize="12" labelsize="0" />
+        </key>
+        <check>
+          <item conditions="0" id="key4_action" name="page1-key4_check1" display="page1-key4_check1" check="10" file="file11" search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+          <item conditions="0" id="key4_action" name="page1-key4_check2" display="page1-key4_check2" check="10" file="file16" search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+        </check>
+      </action>
+      <label id="page1_title" system="0" x="0" y="0" width="240" height="28" text="メ ニ ュ ー" multiline="0" textsize="20" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label1" display="検針処理" system="0" x="10" y="54" width="220" height="28" text="R?：検針処理" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFFFF59D" borderstyle="1" borderwidth="1" bordercolor="FFFDD835" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label2" display="設定" system="0" x="10" y="124" width="220" height="28" text="F1：設定" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFA5D6FF" borderstyle="1" borderwidth="1" bordercolor="FF3232FA" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label3" display="作業履歴" system="0" x="10" y="90" width="220" height="28" text="F2：検針履歴" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFC0FFC0" borderstyle="1" borderwidth="1" bordercolor="FF80FF80" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label7" display="データ転送" system="0" x="10" y="162" width="220" height="28" text="?L：データ転送" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEF9A9A" borderstyle="1" borderwidth="1" bordercolor="FFE53935" col="0" viewStyle="0" digit="8" />
+      <updateItem>
+        <item id="page1_label1" />
+        <item id="page1_label2" />
+        <item id="page1_label3" />
+        <item id="page1_label7" />
+        <item id="page13_textbox1" />
+        <item id="page13_textbox2" />
+      </updateItem>
+    </page>
+    <page id="SettingsPage" display="本体設定ページ" location="000E0015" minimum="1" type="3" showKeyInfo="1" />
+    <page id="page5" display="指針入力" location="03EC0003" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page9" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="戻 る" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="0" conditions="0">
+          <keyLabel hide="1" text="F2" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="272" option="key4_action" conditions="0">
+          <result back="0">
+            <success page="page11" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="次 へ" textsize="12" labelsize="0" />
+        </key>
+        <check>
+          <item conditions="0" id="key4_action" name="page5-key4_check1" display="page5-key4_check1" check="8" textbox="page5_textbox2" common="page5_textbox2_common" search="0" col="0" outputcol="0" length="4" min="0" max="0" />
+          <item conditions="0" id="key4_action" name="page5-key4_check3" display="page5-key4_check3" check="8" textbox="page5_textbox4" common="page5_textbox4_common" search="0" col="0" outputcol="0" length="4" min="0" max="0" />
+          <item conditions="0" id="key4_action" name="page5-key4_check4" display="page5-key4_check4" check="30" common="page5_label3" text="0" search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+        </check>
+      </action>
+      <textFiled id="page5_textbox2" common="page5_textbox2_common" display="今回指針" index="1" x="10" y="120" input="64" kim="64" width="220" height="68" textlimit="4" textsize="20" textstyle="0" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" clear="1" update="0" label="今回指針">
+        <updateItem>
+          <item id="page5_label3" />
+        </updateItem>
+        <scanOption>
+          <scan trigger="autoOffEx" centerScan="false" timeout="5000" notification="all" />
+          <upca enable="true" />
+          <upce enable="true" />
+          <ean8 enable="true" />
+          <ean13 enable="true" />
+          <code128 enable="true" />
+          <gs1-128 enable="true" edit="false" ai="true" />
+          <code39 enable="true" digitNumberLimit="1-48" />
+          <code93 enable="false" digitNumberLimit="4-55" />
+          <itf enable="true" digitNumberLimit="14" />
+          <dtf enable="true" digitNumberLimit="12" />
+          <codabar enable="true" startStopCharacter="true" digitNumberLimit="3-55" />
+          <msiPlessey enable="false" digitNumberLimit="6-55" />
+          <gs1DataBar enable="true" />
+          <gs1DataBarLimited enable="true" />
+          <gs1DataBarExpanded enable="true" />
+          <gs1DataBarComposite enable="true" />
+          <qrCode enable="true" />
+          <microQRCode enable="true" />
+          <pdf417 enable="true" />
+          <microPDF417 enable="true" />
+          <maxicode enable="false" />
+          <dataMatrix enable="true" />
+          <ocr enableFormat="disable" />
+        </scanOption>
+      </textFiled>
+      <textFiled id="page5_textbox4" common="page5_textbox4_common" display="前回指針" index="9999" x="10" y="40" input="64" kim="64" width="220" height="68" textlimit="4" textsize="20" textstyle="0" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" clear="1" update="0" label="前回指針">
+        <updateItem>
+          <item id="page5_label3" />
+        </updateItem>
+        <scanOption>
+          <scan trigger="autoOffEx" centerScan="false" timeout="5000" notification="all" />
+          <upca enable="true" />
+          <upce enable="true" />
+          <ean8 enable="true" />
+          <ean13 enable="true" />
+          <code128 enable="true" />
+          <gs1-128 enable="true" edit="false" ai="true" />
+          <code39 enable="true" digitNumberLimit="1-48" />
+          <code93 enable="false" digitNumberLimit="4-55" />
+          <itf enable="true" digitNumberLimit="14" />
+          <dtf enable="true" digitNumberLimit="12" />
+          <codabar enable="true" startStopCharacter="true" digitNumberLimit="3-55" />
+          <msiPlessey enable="false" digitNumberLimit="6-55" />
+          <gs1DataBar enable="true" />
+          <gs1DataBarLimited enable="true" />
+          <gs1DataBarExpanded enable="true" />
+          <gs1DataBarComposite enable="true" />
+          <qrCode enable="true" />
+          <microQRCode enable="true" />
+          <pdf417 enable="true" />
+          <microPDF417 enable="true" />
+          <maxicode enable="false" />
+          <dataMatrix enable="true" />
+          <ocr enableFormat="disable" />
+        </scanOption>
+        <edit>
+          <substitution file="file11" search="3" col="8" common="page9_combobox1_common" />
+        </edit>
+      </textFiled>
+      <label id="page5_label3" display="今回使用量" system="0" x="110" y="230" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="5" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" format="{0}" viewStyle="0" digit="8">
+        <edit>
+          <calculate type="2" name="page5_label3">
+            <item type="1" id="page5_textbox2_common" number="0" />
+            <item type="2" id="page5_textbox4_common" number="0" />
+            <item type="1" number="10000">
+              <check>
+                <item conditions="0" check="33" text="0" />
+              </check>
+            </item>
+          </calculate>
+        </edit>
+      </label>
+      <label id="page5_label10" display="今回使用量（見出し）" system="0" x="10" y="200" width="130" height="22" text="今回使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page5_title" system="0" x="0" y="0" width="240" height="28" text="指針入力" multiline="0" textsize="20" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page5_label11" display="page5_label11" system="0" x="190" y="230" width="40" height="22" text="m3" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <updateItem>
+        <item id="page5_label3" />
+        <item id="page5_label10" />
+        <item id="page5_label11" />
+        <item id="page5_textbox2" />
+        <item id="page5_textbox4" />
+      </updateItem>
+    </page>
+    <page id="page9" display="需要家スキャン" location="02F7016F" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page1" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="戻 る" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="0" conditions="0">
+          <keyLabel hide="1" text="F2" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="272" option="key4_action" conditions="0">
+          <result back="0">
+            <success page="page5" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="次 へ" textsize="12" labelsize="0" />
+        </key>
+        <check>
+          <item conditions="0" id="key4_action" name="page9-key4_check1" display="page9-key4_check1" check="1" search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+          <item conditions="0" id="key4_action" name="page9-key4_check2" display="page9-key4_check2" check="2" file="file11" common="page9_combobox1_common" search="0" col="3" outputcol="0" length="0" min="0" max="0">
+            <substitutionitem search="5" common="page9_combobox2_common" />
+          </item>
+        </check>
+      </action>
+      <label id="page9_title" system="0" x="0" y="0" width="240" height="28" text="需要家スキャン" multiline="0" textsize="20" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FFC04000" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page9_label1" display="需要家名（見出し）" system="0" x="10" y="210" width="235" height="22" text="需要家名" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page9_label2" display="需要家名" system="0" x="10" y="240" width="235" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <substitution file="file11" search="3" col="7" common="page9_combobox1_common">
+            <item search="5" common="page9_combobox2_common" />
+          </substitution>
+        </edit>
+      </label>
+      <label id="page9_label3" display="マンション名_" system="0" x="10" y="105" width="72" height="8" multiline="0" textsize="6" textcolor="FFFFFFFF" textstyle="0" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <substitution file="file11" search="3" col="4" common="page9_combobox1_common" />
+        </edit>
+      </label>
+      <label id="page9_label4" display="自治体CD_" system="0" x="10" y="105" width="72" height="8" multiline="0" textsize="6" textcolor="FFFFFFFF" textstyle="0" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <substitution file="file11" search="3" col="1" common="page9_combobox1_common" />
+        </edit>
+      </label>
+      <label id="page9_label5" display="自治体名_" system="0" x="10" y="105" width="72" height="8" multiline="0" textsize="6" textcolor="FFFFFFFF" textstyle="0" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <substitution file="file11" search="3" col="2" common="page9_combobox1_common" />
+        </edit>
+      </label>
+      <selectBox id="page9_combobox1" index="1" taboder="0" common="page9_combobox1_common" display="マンション名_コンボ" x="10" y="36" width="220" height="68" label="マンション名（スキャン）" textsize="20" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" file="file11" viewcol="4" datacol="3" clear="4" update="0" type="0" input="4096" same="1">
+        <updateItem>
+          <item id="page9_label2" />
+          <item id="page9_label3" />
+          <item id="page9_label4" />
+          <item id="page9_label5" />
+          <item id="page9_combobox2" />
+        </updateItem>
+        <scanOption>
+          <scan trigger="autoOffEx" centerScan="false" timeout="5000" notification="all" />
+          <upca enable="true" />
+          <upce enable="true" />
+          <ean8 enable="true" />
+          <ean13 enable="true" />
+          <code128 enable="true" />
+          <gs1-128 enable="true" edit="false" ai="true" />
+          <code39 enable="true" digitNumberLimit="1-48" />
+          <code93 enable="false" digitNumberLimit="4-55" />
+          <itf enable="true" digitNumberLimit="14" />
+          <dtf enable="true" digitNumberLimit="12" />
+          <codabar enable="true" startStopCharacter="true" digitNumberLimit="3-55" />
+          <msiPlessey enable="false" digitNumberLimit="6-55" />
+          <gs1DataBar enable="true" />
+          <gs1DataBarLimited enable="true" />
+          <gs1DataBarExpanded enable="true" />
+          <gs1DataBarComposite enable="true" />
+          <qrCode enable="true" />
+          <microQRCode enable="true" />
+          <pdf417 enable="true" />
+          <microPDF417 enable="true" />
+          <maxicode enable="false" />
+          <dataMatrix enable="true" />
+          <ocr enableFormat="disable" />
+        </scanOption>
+      </selectBox>
+      <selectBox id="page9_combobox2" index="2" taboder="0" common="page9_combobox2_common" display="部屋番号" x="10" y="120" width="220" height="68" label="部屋番号（スキャン）" textsize="20" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" file="file11" viewcol="5" datacol="5" clear="4" update="0" type="0" input="4096" same="1">
+        <updateItem>
+          <item id="page9_label2" />
+        </updateItem>
+        <filter type="1" common="page9_combobox1_common" search="0" col="3" />
+        <scanOption>
+          <scan trigger="autoOffEx" centerScan="false" timeout="5000" notification="all" />
+          <upca enable="true" />
+          <upce enable="true" />
+          <ean8 enable="true" />
+          <ean13 enable="true" />
+          <code128 enable="true" />
+          <gs1-128 enable="true" edit="false" ai="true" />
+          <code39 enable="true" digitNumberLimit="1-48" />
+          <code93 enable="false" digitNumberLimit="4-55" />
+          <itf enable="true" digitNumberLimit="14" />
+          <dtf enable="true" digitNumberLimit="12" />
+          <codabar enable="true" startStopCharacter="true" digitNumberLimit="3-55" />
+          <msiPlessey enable="false" digitNumberLimit="6-55" />
+          <gs1DataBar enable="true" />
+          <gs1DataBarLimited enable="true" />
+          <gs1DataBarExpanded enable="true" />
+          <gs1DataBarComposite enable="true" />
+          <qrCode enable="true" />
+          <microQRCode enable="true" />
+          <pdf417 enable="true" />
+          <microPDF417 enable="true" />
+          <maxicode enable="false" />
+          <dataMatrix enable="true" />
+          <ocr enableFormat="disable" />
+        </scanOption>
+      </selectBox>
+      <updateItem>
+        <item id="page9_label1" />
+        <item id="page9_label2" />
+        <item id="page9_label3" />
+        <item id="page9_label4" />
+        <item id="page9_label5" />
+        <item id="page9_combobox1" />
+        <item id="page9_combobox2" />
+      </updateItem>
+    </page>
+    <page id="page11" display="使用量確認" location="05920013" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page5" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="戻 る" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="0" conditions="0">
+          <keyLabel hide="1" text="F2" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="272" conditions="0">
+          <result back="0">
+            <item page="page12" result="0" error="0" success="0" option="key4_action_1" return="0" /> <!-- 範囲内 -->
+            <item page="page23" result="0" error="0" success="0" option="key4_action_2" return="0" /> <!-- 上限以上 -->
+            <item page="page24" result="0" error="0" success="0" option="key4_action_3" return="0" /> <!-- 下限以下 -->
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="次 へ" textsize="12" labelsize="0" />
+        </key>
+        <check>
+          <item conditions="0" id="key4_action_2" name="page2-key4_check2_1" display="" check="33" common="page11_label16" commonex="page11_label12"  search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+
+          <item conditions="0" id="key4_action_3" name="page2-key4_check3_1" display="" check="32" common="page11_label17" commonex="page11_label12"  search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+
+          <item conditions="0" id="key4_action_1" name="page2-key4_check1_1" display="" check="32" common="page11_label16" commonex="page11_label12"  search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+          <item conditions="0" id="key4_action_1" name="page2-key4_check1_1" display="" check="33" common="page11_label17" commonex="page11_label12"  search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+        </check>
+      </action>
+      <label id="page11_title" system="0" x="0" y="0" width="240" height="28" text="使用量確認" multiline="0" textsize="20" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label1" display="前回使用量（見出し）" system="0" x="10" y="65" width="130" height="22" text="前回使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label2" display="前々回使用量（見出し）" system="0" x="10" y="95" width="130" height="22" text="前々回使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label3" display="3回前使用量（見出し）" system="0" x="10" y="125" width="150" height="22" text="３回前使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label4" display="平均使用量（見出し）" system="0" x="10" y="155" width="130" height="22" text="平均使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label10" display="前回使用量" system="0" x="150" y="65" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <substitution file="file11" search="3" col="9" common="page9_combobox1_common">
+            <item search="5" common="page9_combobox2_common" />
+          </substitution>
+        </edit>
+      </label>
+      <label id="page11_label11" display="前々回使用量" system="0" x="150" y="95" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <substitution file="file11" search="3" col="10" common="page9_combobox1_common">
+            <item search="5" common="page9_combobox2_common" />
+          </substitution>
+        </edit>
+      </label>
+      <label id="page11_label13" display="3回前使用量" system="0" x="150" y="125" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <substitution file="file11" search="3" col="11" common="page9_combobox1_common">
+            <item search="5" common="page9_combobox2_common" />
+          </substitution>
+        </edit>
+      </label>
+      <label id="page11_label14" display="平均使用量" system="0" x="150" y="155" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <substitution file="file11" search="3" col="12" common="page9_combobox1_common" />
+        </edit>
+      </label>
+      <label id="page11_label8" display="使用量下限（見出し）" system="0" x="10" y="185" width="130" height="22" text="使用量下限" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label12" display="今回使用量２" system="0" x="150" y="245" width="50" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <calculate type="0" name="page11_label12">
+            <item type="1" id="page5_textbox2_common" number="0" />
+            <item type="2" id="page5_textbox4_common" number="0" />
+            <item type="1" number="10000">
+              <check>
+                <item conditions="0" check="33" text="0" />
+              </check>
+            </item>
+          </calculate>
+        </edit>
+      </label>
+      <label id="page11_label20" display="page11_labe22" system="0" x="200" y="245" width="30" height="22" text="m3" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label9" display="使用量上限（見出し）" system="0" x="10" y="215" width="130" height="22" text="使用量上限" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label7" display="今回使用量２（見出し）" system="0" x="10" y="245" width="130" height="22" text="今回使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label16" display="使用量上限２" system="0" x="150" y="215" width="50" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <calculate type="0" name="page11_label16">
+            <item type="1" id="page11_label14" number="0" />
+            <item type="3" id="page13_textbox2_common" number="0" />
+            <item type="4" number="100" />
+            <item type="1" id="page11_label14" number="0" />
+          </calculate>
+        </edit>
+      </label>
+      <label id="page11_label20" display="page11_labe20" system="0" x="200" y="215" width="30" height="22" text="m3" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label17" display="使用量下限２" system="0" x="150" y="185" width="50" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8">
+        <edit>
+          <calculate type="0" name="page11_label16">
+            <item type="1" id="page11_label14" number="0" />
+            <item type="3" id="page13_textbox1_common" number="0" />
+            <item type="4" number="100" />
+            <item type="3" number="-1" />
+            <item type="1" id="page11_label14" number="0" />
+          </calculate>
+        </edit>
+      </label>
+      <label id="page11_label21" display="page11_labe21" system="0" x="200" y="185" width="30" height="22" text="m3" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label18" common="page9_label2" display="page11_label18" system="0" x="110" y="35" width="120" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="5" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page11_label19" common="page9_combobox2_common" display="page11_label19" system="0" x="10" y="35" width="100" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="5" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" format="{0} 号室" viewStyle="0" digit="8" />
+      <updateItem>
+        <item id="page11_label1" />
+        <item id="page11_label2" />
+        <item id="page11_label3" />
+        <item id="page11_label4" />
+        <item id="page11_label10" />
+        <item id="page11_label11" />
+        <item id="page11_label13" />
+        <item id="page11_label14" />
+        <item id="page11_label8" />
+        <item id="page11_label12" />
+        <item id="page11_label9" />
+        <item id="page11_label7" />
+        <item id="page11_label16" />
+        <item id="page11_label17" />
+        <item id="page11_label18" />
+        <item id="page11_label19" />
+        <item id="page11_label20" />
+        <item id="page11_label21" />
+        <item id="page11_label22" />
+      </updateItem>
+    </page>
+    <page id="page12" display="請求金額" location="05790201" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page11" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="戻 る" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="0" conditions="0">
+          <keyLabel hide="1" text="F2" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="16" conditions="0">
+          <result back="0">
+            <success page="printpage1" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="登 録" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <label id="page12_title" system="0" x="0" y="0" width="240" height="28" text="請求金額" multiline="0" textsize="20" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page12_label1" display="請求金額（見出し）" system="0" x="10" y="120" width="220" height="22" text="請求金額" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page12_label2" display="請求金額" system="0" x="90" y="150" width="100" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" format="{0}" viewStyle="1" digit="8">
+        <edit>
+          <substitution file="file16" search="2" col="3" common="page5_label3" />
+        </edit>
+      </label>
+      <label id="page12_label5" display="page12_label5" system="0" x="110" y="70" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" format="{0}" viewStyle="0" digit="8">
+        <edit>
+          <calculate type="0" name="page12_label5">
+            <item type="1" id="page5_textbox2_common" number="0" />
+            <item type="2" id="page5_textbox4_common" number="0" />
+            <item type="1" number="10000">
+              <check>
+                <item conditions="0" check="33" text="0" />
+              </check>
+            </item>
+          </calculate>
+        </edit>
+      </label>
+      <label id="page12_label6" display="page12_label6" system="0" x="10" y="40" width="130" height="22" text="今回使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page12_label7" display="page12_label7" system="0" x="190" y="70" width="40" height="22" text="m3" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page12_label8" display="page12_label8" system="0" x="190" y="150" width="40" height="22" text="円" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <updateItem>
+        <item id="page12_label1" />
+        <item id="page12_label2" />
+        <item id="page12_label5" />
+        <item id="page12_label6" />
+        <item id="page12_label7" />
+        <item id="page12_label8" />
+      </updateItem>
+    </page>
+    <page id="page13" display="アラート設定" location="02760018" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page17" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="戻 る" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="0" conditions="0">
+          <keyLabel hide="1" text="F2" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="1040" option="key4_action" conditions="0">
+          <result back="0">
+            <success page="page17" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="保 存" textsize="12" labelsize="0" />
+        </key>
+        <check>
+          <item conditions="0" id="key4_action" name="page13-key4_check1" display="page13-key4_check1" check="30" common="page13_textbox1_common" text="0" search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+          <item conditions="0" id="key4_action" name="page13-key4_check2" display="page13-key4_check2" check="30" common="page13_textbox2_common" text="0" search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+        </check>
+      </action>
+      <textFiled id="page13_textbox1" common="page13_textbox1_common" display="使用量下限" index="1" x="10" y="42" input="64" kim="64" width="180" height="68" textlimit="3" textsize="20" textstyle="0" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" clear="0" update="0" label="使用量下限">
+        <scanOption>
+          <scan trigger="autoOffEx" centerScan="false" timeout="5000" notification="all" />
+          <upca enable="false" />
+          <upce enable="false" />
+          <ean8 enable="false" />
+          <ean13 enable="false" />
+          <code128 enable="false" />
+          <gs1-128 enable="false" edit="false" ai="true" />
+          <code39 enable="false" digitNumberLimit="1-48" />
+          <code93 enable="false" digitNumberLimit="4-55" />
+          <itf enable="false" digitNumberLimit="14" />
+          <dtf enable="false" digitNumberLimit="12" />
+          <codabar enable="false" startStopCharacter="true" digitNumberLimit="3-55" />
+          <msiPlessey enable="false" digitNumberLimit="6-55" />
+          <gs1DataBar enable="false" />
+          <gs1DataBarLimited enable="false" />
+          <gs1DataBarExpanded enable="false" />
+          <gs1DataBarComposite enable="false" />
+          <qrCode enable="false" />
+          <microQRCode enable="false" />
+          <pdf417 enable="false" />
+          <microPDF417 enable="false" />
+          <maxicode enable="false" />
+          <dataMatrix enable="false" />
+          <ocr enableFormat="disable" />
+        </scanOption>
+        <edit>
+          <substitution file="file100" key="under" />
+        </edit>
+      </textFiled>
+      <textFiled id="page13_textbox2" common="page13_textbox2_common" display="使用量上限" index="2" x="10" y="118" input="64" kim="64" width="180" height="68" textlimit="3" textsize="20" textstyle="0" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" clear="0" update="0" label="使用量上限">
+        <scanOption>
+          <scan trigger="autoOffEx" centerScan="false" timeout="5000" notification="all" />
+          <upca enable="false" />
+          <upce enable="false" />
+          <ean8 enable="false" />
+          <ean13 enable="false" />
+          <code128 enable="false" />
+          <gs1-128 enable="false" edit="false" ai="true" />
+          <code39 enable="false" digitNumberLimit="1-48" />
+          <code93 enable="false" digitNumberLimit="4-55" />
+          <itf enable="false" digitNumberLimit="14" />
+          <dtf enable="false" digitNumberLimit="12" />
+          <codabar enable="false" startStopCharacter="true" digitNumberLimit="3-55" />
+          <msiPlessey enable="false" digitNumberLimit="6-55" />
+          <gs1DataBar enable="false" />
+          <gs1DataBarLimited enable="false" />
+          <gs1DataBarExpanded enable="false" />
+          <gs1DataBarComposite enable="false" />
+          <qrCode enable="false" />
+          <microQRCode enable="false" />
+          <pdf417 enable="false" />
+          <microPDF417 enable="false" />
+          <maxicode enable="false" />
+          <dataMatrix enable="false" />
+          <ocr enableFormat="disable" />
+        </scanOption>
+        <edit>
+          <substitution file="file100" key="upper" />
+        </edit>
+      </textFiled>
+      <label id="page13_title" system="0" x="0" y="0" width="240" height="34" text="アラート設定" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page13_label2" display="page13_label2" system="0" x="200" y="80" width="30" height="22" text="％" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="32" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page13_label3" display="page13_label3" system="0" x="200" y="155" width="30" height="22" text="％" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="32" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <data>
+        <output id="key4_action" name="key4_action_data1" display="key4_action_data1" file="file100">
+          <item type="text" key="under" id="page13_textbox1_common" />
+          <item type="text" key="upper" id="page13_textbox2_common" />
+        </output>
+      </data>
+      <updateItem>
+        <item id="page13_label2" />
+        <item id="page13_label3" />
+        <item id="page13_textbox1" />
+        <item id="page13_textbox2" />
+      </updateItem>
+    </page>
+    <page id="page15" display="メニュー画面" location="00040189" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page1" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="ﾒﾆｭｰ" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="16" conditions="0">
+          <result back="0">
+            <success page="transferpage9" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="受信" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="16" conditions="0">
+          <result back="0">
+            <success page="transferpage11" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="送信" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <label id="page15_title" system="0" x="0" y="0" width="240" height="34" text="データ転送" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page15_label3" display="データ送信" system="0" x="10" y="54" width="220" height="28" text="R?：データ送信" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFFFF59D" borderstyle="1" borderwidth="1" bordercolor="FFFDD835" col="0" viewStyle="0" digit="8" />
+      <label id="page15_label4" display="マスタ受信" system="0" x="10" y="90" width="220" height="28" text="F2：マスタ受信" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFA5D6A7" borderstyle="1" borderwidth="1" bordercolor="FF43A047" col="0" viewStyle="0" digit="8" />
+      <label id="page15_label5" display="メニュー画面２" system="0" x="10" y="126" width="220" height="28" text="?L：メニュー画面" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEF9A9A" borderstyle="1" borderwidth="1" bordercolor="FFE53935" col="0" viewStyle="0" digit="8" />
+      <updateItem>
+        <item id="page15_label3" />
+        <item id="page15_label4" />
+        <item id="page15_label5" />
+      </updateItem>
+    </page>
+    <page id="page17" display="設定" location="01490015" minimum="1" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page1" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="ﾒﾆｭｰ" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="16" conditions="0">
+          <result back="0">
+            <success page="page13" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="ｱﾗｰﾄ" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="16" conditions="0">
+          <result back="0">
+            <success page="SettingsPage" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="設 定" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <label id="page17_title" display="page17_title" system="0" x="0" y="0" width="240" height="34" text="設定" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page17_label8" display="メニュー画面１" system="0" x="10" y="126" width="220" height="28" text="?L：メニュー画面" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEF9A9A" borderstyle="1" borderwidth="1" bordercolor="FFE53935" col="0" viewStyle="0" digit="8" />
+      <label id="page17_label9" display="本体設定" system="0" x="10" y="54" width="220" height="28" text="R?：本体設定" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFFFF59D" borderstyle="1" borderwidth="1" bordercolor="FFFDD835" col="0" viewStyle="0" digit="8" />
+      <label id="page17_label10" display="アラート設定" system="0" x="10" y="90" width="220" height="28" text="F2：アラート設定" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFA5D6A7" borderstyle="1" borderwidth="1" bordercolor="FF43A047" col="0" viewStyle="0" digit="8" />
+      <updateItem>
+        <item id="page17_label8" />
+        <item id="page17_label9" />
+        <item id="page17_label10" />
+      </updateItem>
+    </page>
+    <page id="transferpage9" display="データ転送ページ9" location="0009028B" minimum="1" type="1" showKeyInfo="1">
+      <data>
+        <fileTransfer name="winusb">
+          <result back="0">
+            <success page="page1" result="1" error="0" success="0" />
+            <fail page="page15" result="1" error="0" success="0" />
+          </result>
+          <item path="master" delete="0" type="1" marge="0" />
+        </fileTransfer>
+      </data>
+    </page>
+    <page id="transferpage11" display="データ転送ページ11" location="00080225" minimum="1" type="1" showKeyInfo="1">
+      <data>
+        <fileTransfer name="winusb">
+          <result back="0">
+            <success page="page1" result="1" error="0" success="0" />
+            <fail page="page15" result="1" error="0" success="0" />
+          </result>
+          <item path="workdata" delete="1" type="0" marge="1" />
+        </fileTransfer>
+      </data>
+    </page>
+    <page id="page22" display="ページ22" location="01900251" minimum="0" backcolor="FFEEEEEE" type="4096" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page1" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="戻 る" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="8" conditions="0">
+          <keyLabel hide="0" text="＜" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="4" conditions="0">
+          <keyLabel hide="0" text="＞" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="1048592" option="key4_action" conditions="0">
+          <result back="0">
+            <success page="page22" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="削 除" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <data>
+        <delete id="key4_action" file="file20" type="3">
+          <item common="page22_dataGrid1_common" col="0" row="-1" />
+        </delete>
+      </data>
+      <label id="page22_title" system="0" x="0" y="0" width="240" height="34" text="履 歴 表 示" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+      <label id="page22_label1" system="11" x="10" y="44" width="220" height="20" multiline="0" textsize="14" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+      <dataGrid id="page22_dataGrid1" common="page22_dataGrid1_common" index="1" taboder="0" x="10" y="64" width="220" height="194" textsize="14" backcolor="FFEEEEEE" file="file20" noheader="1" multiline="0" split="0">
+        <header index="1" text="項目" width="100" />
+        <header index="2" text="データ" width="115" />
+        <item col="6" filed="ﾏﾝｼｮﾝ名" />
+        <item col="7" filed="部屋番号" />
+        <item col="8" filed="需要家名" />
+        <item col="10" filed="今回指針" />
+        <item col="12" filed="今回請求金額" />
+      </dataGrid>
+      <updateItem>
+        <item id="page22_label1" />
+        <item id="page22_dataGrid1_common" />
+      </updateItem>
+    </page>
+    <page id="printpage1" display="印刷ページ1" location="03BC02F7" minimum="0" type="2" showKeyInfo="1">
+      <data>
+        <output id="success_action" name="printpage1-success_data1" display="printpage1-success_data1" file="file20">
+          <item type="serialid" format="" col="0" search="0" index="1" />
+          <item type="date" format="yyyy/MM/dd" col="0" search="0" index="2" />
+          <item type="text" id="page9_label4" col="0" search="0" index="3" />
+          <item type="text" id="page9_label5" col="0" search="0" index="4" />
+          <item type="text" id="page9_combobox1_common" col="0" search="0" index="5" />
+          <item type="text" id="page9_label3" col="0" search="0" index="6" />
+          <item type="text" id="page9_combobox2_common" col="0" search="0" index="7" />
+          <item type="text" id="page9_label2" col="0" search="0" index="8" />
+          <item type="text" id="page5_textbox4_common" col="0" search="0" index="9" />
+          <item type="text" id="page5_textbox2_common" col="0" search="0" index="10" />
+          <item type="text" id="page5_label3" col="0" search="0" index="11" />
+          <item type="text" id="page12_label2" col="0" search="0" index="12" />
+        </output>
+      </data>
+      <print printer="gt50" feed="-1" sheet="0" continuous="0">
+        <item page="printPage2" />
+        <result back="0">
+          <success page="page9" result="1" option="success_action" error="0" success="0" />
+          <fail page="page12" result="1" error="0" success="0" />
+        </result>
+      </print>
+    </page>
+    <page id="page23" display="ページ23" location="04430164" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page5" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="修 正" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="0" conditions="0">
+          <keyLabel hide="1" text="F2" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="16" conditions="0">
+          <result back="0">
+            <success page="page12" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="次 へ" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <label id="page23_title" system="0" x="0" y="0" width="240" height="34" text="注 意" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FFE53935" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page23_label1" display="page23_label1" system="0" x="10" y="42" width="220" height="72" text="今回使用量が、上限を上回っています。このまま、検針を進めますか？" multiline="1" textsize="16" textcolor="FF000000" textstyle="0" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page23_label2" display="page23_label2" system="0" x="10" y="122" width="130" height="22" text="今回使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page23_label3" display="page23_label3" system="0" x="110" y="152" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="5" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" format="{0}m3" viewStyle="0" digit="8">
+        <edit>
+          <calculate type="2" name="page23_label3">
+            <item type="1" id="page5_textbox2_common" number="0" />
+            <item type="2" id="page5_textbox4_common" number="0" />
+            <item type="1" number="10000">
+              <check>
+                <item conditions="0" check="33" text="0" />
+              </check>
+            </item>
+          </calculate>
+        </edit>
+      </label>
+      <label id="page23_label5" display="page23_label5" system="0" x="10" y="182" width="130" height="22" text="使用量上限" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page23_label6" display="page23_label6" system="0" x="110" y="212" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" format="{0}m3">
+        <edit>
+          <calculate type="0" name="page23_label6">
+            <item type="1" id="page11_label14" number="0" />
+            <item type="3" id="page13_textbox2_common" number="0" />
+            <item type="4" number="100" />
+            <item type="1" id="page11_label14" number="0" />
+          </calculate>
+        </edit>
+      </label>
+      <updateItem>
+        <item id="page23_label1" />
+        <item id="page23_label2" />
+        <item id="page23_label3" />
+        <item id="page23_label5" />
+        <item id="page23_label6" />
+      </updateItem>
+    </page>
+    <page id="page24" display="ページ24" location="04430164" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result back="0">
+            <success page="page5" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="修 正" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="0" conditions="0">
+          <keyLabel hide="1" text="F2" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="16" conditions="0">
+          <result back="0">
+            <success page="page12" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="次 へ" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <label id="page24_title" system="0" x="0" y="0" width="240" height="34" text="注 意" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FFE53935" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page24_label1" display="page24_label1" system="0" x="10" y="42" width="220" height="72" text="今回使用量が、下限を下回っています。このまま、検針を進めますか？" multiline="1" textsize="16" textcolor="FF000000" textstyle="0" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page24_label2" display="page24_label2" system="0" x="10" y="122" width="130" height="22" text="今回使用量" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="1" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page24_label3" display="page24_label3" system="0" x="110" y="152" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="5" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" format="{0}m3" viewStyle="0" digit="8">
+        <edit>
+          <calculate type="2" name="page24_label3">
+            <item type="1" id="page5_textbox2_common" number="0" />
+            <item type="2" id="page5_textbox4_common" number="0" />
+            <item type="1" number="10000">
+              <check>
+                <item conditions="0" check="33" text="0" />
+              </check>
+            </item>
+          </calculate>
+        </edit>
+      </label>
+      <label id="page24_label5" display="page24_label5" system="0" x="10" y="182" width="130" height="22" text="使用量下限" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page24_label6" display="page24_label6" system="0" x="110" y="212" width="80" height="22" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" format="{0}m3">
+        <edit>
+          <calculate type="0" name="page24_label6">
+            <item type="1" id="page11_label14" number="0" />
+            <item type="3" id="page13_textbox1_common" number="0" />
+            <item type="4" number="100" />
+            <item type="3" number="-1" />
+            <item type="1" id="page11_label14" number="0" />
+          </calculate>
+        </edit>
+      </label>
+      <updateItem>
+        <item id="page24_label1" />
+        <item id="page24_label2" />
+        <item id="page24_label3" />
+        <item id="page24_label5" />
+        <item id="page24_label6" />
+      </updateItem>
+    </page>
+  </layout>
+  <control>
+    <buzzer name="error" display="エラー音" freq="0" count="3" ontime="100" offtime="100" />
+    <buzzer name="success" display="成功音" freq="7" count="1" ontime="200" offtime="0" />
+    <file name="file11" display="Master_Juyoka" file="master\Master_Juyoka.csv" mirroring="0" type="0" split="0" encode="0" import="0" master="1">
+      <header write="1">
+        <item text="自治体CD" index="1" />
+        <item text="自治体名" index="2" />
+        <item text="マンションCD" index="3" />
+        <item text="マンション名" index="4" />
+        <item text="部屋番号" index="5" />
+        <item text="需要家CD" index="6" />
+        <item text="需要家名" index="7" />
+        <item text="前回指針" index="8" />
+        <item text="前回使用量" index="9" />
+        <item text="前々回使用量" index="10" />
+        <item text="3回前使用量" index="11" />
+        <item text="平均使用量" index="12" />
+      </header>
+    </file>
+    <file name="file16" display="Master_JichitaiShiyoryo" file="master\Master_JichitaiShiyoryo.csv" mirroring="0" type="0" split="0" encode="0" import="0" master="1">
+      <header write="1">
+        <item text="自治体CD" index="1" />
+        <item text="使用量" index="2" />
+        <item text="請求金額" index="3" />
+      </header>
+    </file>
+    <file name="file19" display="Master_ShiyoryoAlert" file="master\Master_ShiyoryoAlert.csv" mirroring="0" type="0" split="0" encode="0" import="0" master="1">
+      <header write="1">
+        <item text="自治体CD" index="1" />
+        <item text="アラート下限" index="2" />
+        <item text="アラート上限" index="3" />
+      </header>
+    </file>
+    <file name="file20" display="Kenshin" file="workdata\$TerminalID_$Date_Kenshin.csv" mirroring="0" type="0" split="0" encode="0" import="0" master="0">
+      <header write="1">
+        <item text="端末ID" index="1" />
+        <item text="検針日" index="2" />
+        <item text="自治体CD" index="3" />
+        <item text="自治体名" index="4" />
+        <item text="マンションCD" index="5" />
+        <item text="マンション名" index="6" />
+        <item text="部屋番号" index="7" />
+        <item text="需要家名" index="8" />
+        <item text="前回指針" index="9" />
+        <item text="今回指針" index="10" />
+        <item text="今回使用量" index="11" />
+        <item text="今回請求金額" index="12" />
+      </header>
+    </file>
+    <file name="file21" display="Master_Manshon" file="master\Master_Manshon.csv" mirroring="0" type="0" split="0" encode="0" import="0" master="1">
+      <header write="0">
+        <item text="マンションCD" index="1" />
+        <item text="マンション名" index="2" />
+      </header>
+    </file>
+    <file name="file100" display="Master_Settings" file="master\Master_Settings.ini" mirroring="0" type="1" split="0" encode="0" import="0" master="1" />
+    <path name="workdata" display="作業フォルダ" path="workdata" mirroring="0" />
+    <path name="master" display="マスタフォルダ" path="master" mirroring="0" />
+    <tran name="winusb" progress="1" syncClock="1" />
+    <folder name=".">
+      <folder name="workdata" />
+      <folder name="master" />
+    </folder>
+  </control>
+  <printing>
+    <printer name="bp100" printer="BP-100（ロール紙）" address="000B5D38FD9F" pin="1910" timeout="30" buzzer="1" feed="0" paper="6" addr_key="BDAddress_bp100" pin_key="Pin_bp100" />
+    <printer name="bp100_label" printer="BP-100（ラベル紙）" pin="1910" file="bdaddress" timeout="30" buzzer="1" feed="0" paper="1" addr_key="BDAddress_bp100label" pin_key="Pin_bp100label" />
+    <printer name="gt50" printer="GT-50P" pin="1910" file="bdaddress" timeout="30" buzzer="1" feed="0" paper="0" addr_key="BDAddress_gt50" pin_key="Pin_gt50" />
+    <printer name="bpf600" printer="BP-F600" address="000B5DB4E292" pin="1234" timeout="30" buzzer="1" feed="0" paper="6" addr_key="BDAddress_bp100" pin_key="Pin_bp100" />
+    <printer name="sii_2inch" printer="SII（2インチ）" pin="0000" file="bdaddress" timeout="0" buzzer="0" feed="0" paper="1" addr_key="BDAddress_sii2" pin_key="Pin_sii2" />
+    <printPage name="printPage1" display="printPage1" printer="bp100" width="1152" height="1677" feed="0">
+      <printLabel id="printLabel1" system="0" x="10" y="50" width="1132" height="90" text="請　求　書" multiline="0" textsize="72" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel2" system="2" x="10" y="220" width="1132" height="40" text="ラベル" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="64" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" format="{0} 検針" parameter="ggggM月" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel3" common="page9_label3" system="0" x="110" y="360" width="700" height="60" multiline="0" textsize="48" textcolor="FF000000" textstyle="0" textalign="16" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel4" common="page9_combobox2_common" system="0" x="840" y="360" width="400" height="60" multiline="0" textsize="48" textcolor="FF000000" textstyle="0" textalign="16" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" format="{0} 号室" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel5" common="page9_label2" system="0" x="110" y="440" width="374" height="60" multiline="0" textsize="48" textcolor="FF000000" textstyle="0" textalign="16" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel23" system="0" x="524" y="440" width="60" height="60" text="様" multiline="0" textsize="48" textcolor="FF000000" textstyle="0" textalign="16" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel6" system="0" x="110" y="600" width="1132" height="40" text="いつもお世話になっております。" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="1" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel7" system="2" x="110" y="650" width="166" height="40" text="" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" format="{0}" parameter="M" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel8" system="0" x="320" y="650" width="900" height="40" text="月分水道のご請求となります。" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="1" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel9" system="0" x="110" y="700" width="1132" height="40" text="次回のお家賃とご一緒にお支払いお願い致します。" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="1" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel10" system="0" x="130" y="904" width="342" height="42" text="前回指針" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel11" system="0" x="130" y="954" width="342" height="42" text="今回指針" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel12" system="0" x="130" y="1004" width="342" height="42" text="使用水量" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel13" common="page5_textbox4_common" system="0" x="484" y="904" width="542" height="42" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel14" common="page5_textbox2_common" system="0" x="484" y="954" width="542" height="42" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel15" common="page5_label3" system="0" x="484" y="1004" width="542" height="42" multiline="0" textsize="32" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel16" system="0" x="126" y="1200" width="450" height="60" text="御請求金額" multiline="0" textsize="42" textcolor="FF000000" textstyle="1" textalign="256" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel17" common="page12_label2" system="0" x="480" y="1180" width="420" height="80" multiline="0" textsize="64" textcolor="FF000000" textstyle="1" textalign="512" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel18" system="0" x="972" y="1200" width="100" height="60" text="円" multiline="0" textsize="42" textcolor="FF000000" textstyle="0" textalign="256" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel19" system="0" x="10" y="1400" width="1132" height="40" multiline="0" textsize="28" textcolor="FF000000" textstyle="0" textalign="64" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" >
+        <edit>
+          <substitution file="file100" key="address" />
+        </edit>
+      </printLabel>
+      <printLabel id="printLabel20" system="0" x="800" y="1440" width="362" height="40" multiline="0" textsize="28" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0">
+        <edit>
+          <substitution file="file100" key="name" />
+        </edit>
+      </printLabel>
+      <printLabel id="printLabel21" system="0" x="10" y="1480" width="1132" height="40" multiline="0" textsize="28" textcolor="FF000000" textstyle="0" textalign="64" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" format="TEL {0}">
+        <edit>
+          <substitution file="file100" key="tel" />
+        </edit>
+      </printLabel>
+      <printLabel id="printLabel22" system="0" x="10" y="1520" width="1132" height="40" multiline="0" textsize="28" textcolor="FF000000" textstyle="0" textalign="64" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" format="FAX {0}">
+        <edit>
+          <substitution file="file100" key="fax" />
+        </edit>
+      </printLabel>
+      <printLine id="printLine2" startX="476" startY="900" endX="476" endY="1050" lineWidth="2" lineColor="FF000000" />
+      <printLine id="printLine3" startX="126" startY="950" endX="1026" endY="950" lineWidth="2" lineColor="FF000000" />
+      <printLine id="printLine4" startX="126" startY="1000" endX="1026" endY="1000" lineWidth="2" lineColor="FF000000" />
+      <printLine id="printLine5" startX="126" startY="1264" endX="1026" endY="1264" lineWidth="2" lineColor="FF000000" />
+      <printLine id="printLine6" startX="126" startY="1268" endX="1026" endY="1268" lineWidth="2" lineColor="FF000000" />
+
+      <printLine id="printLine8" startX="110" startY="502" endX="596" endY="502" lineWidth="2" lineColor="FF000000" />
+
+      <printRectangle id="printRectangle1" x="126" y="900" width="900" height="150" lineWidth="2" lineColor="FF000000" fillColor="FF000000" fill="0" hattch="0" />
+    </printPage>
+    <printPage name="printPage2" display="printPage2" printer="gt50" width="576" height="0" feed="0">
+      <printLabel id="printLabel1" system="0" x="10" y="50" width="556" height="45" text="請　求　書" multiline="0" textsize="36" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel2" system="2" x="10" y="100" width="556" height="20" text="ラベル" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="64" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" format="{0} 検針" parameter="ggggM月" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel3" common="page9_label3" system="0" x="50" y="180" width="350" height="30" multiline="0" textsize="24" textcolor="FF000000" textstyle="0" textalign="16" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel4" common="page9_combobox2_common" system="0" x="420" y="180" width="400" height="30" multiline="0" textsize="24" textcolor="FF000000" textstyle="0" textalign="16" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" format="{0} 号室" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel5" common="page9_label2" system="0" x="50" y="220" width="187" height="30" multiline="0" textsize="24" textcolor="FF000000" textstyle="0" textalign="16" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel23" system="0" x="262" y="220" width="30" height="30" text="様" multiline="0" textsize="24" textcolor="FF000000" textstyle="0" textalign="16" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel6" system="0" x="50" y="300" width="556" height="20" text="いつもお世話になっております。" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="1" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel7" system="2" x="50" y="325" width="83" height="20" text="" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" format="{0}" parameter="M" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel8" system="0" x="160" y="325" width="450" height="20" text="月分水道のご請求となります。" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="1" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel9" system="0" x="50" y="350" width="556" height="20" text="次回のお家賃とご一緒にお支払いお願い致します。" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="1" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel10" system="0" x="65" y="452" width="171" height="21" text="前回指針" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel11" system="0" x="65" y="477" width="171" height="21" text="今回指針" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel12" system="0" x="65" y="402" width="171" height="21" text="使用水量" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel13" common="page5_textbox4_common" system="0" x="242" y="452" width="271" height="21" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel14" common="page5_textbox2_common" system="0" x="242" y="452" width="271" height="21" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel15" common="page5_label3" system="0" x="242" y="502" width="271" height="21" multiline="0" textsize="16" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel16" system="0" x="63" y="600" width="225" height="30" text="御請求金額" multiline="0" textsize="21" textcolor="FF000000" textstyle="1" textalign="256" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel17" common="page12_label2" system="0" x="240" y="590" width="210" height="40" multiline="0" textsize="32" textcolor="FF000000" textstyle="1" textalign="512" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel18" system="0" x="486" y="600" width="50" height="30" text="円" multiline="0" textsize="21" textcolor="FF000000" textstyle="0" textalign="256" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" />
+      <printLabel id="printLabel19" system="0" x="10" y="700" width="566" height="20" multiline="0" textsize="14" textcolor="FF000000" textstyle="0" textalign="64" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" >
+        <edit>
+          <substitution file="file100" key="address" />
+        </edit>
+      </printLabel>
+      <printLabel id="printLabel20" system="0" x="400" y="720" width="181" height="20" multiline="0" textsize="14" textcolor="FF000000" textstyle="0" textalign="32" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0">
+        <edit>
+          <substitution file="file100" key="name" />
+        </edit>
+      </printLabel>
+      <printLabel id="printLabel21" system="0" x="10" y="740" width="566" height="20" multiline="0" textsize="14" textcolor="FF000000" textstyle="0" textalign="64" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" format="TEL {0}">
+        <edit>
+          <substitution file="file100" key="tel" />
+        </edit>
+      </printLabel>
+      <printLabel id="printLabel22" system="0" x="10" y="760" width="566" height="20" multiline="0" textsize="14" textcolor="FF000000" textstyle="0" textalign="64" imagealign="0" orientation="0" textweight="0" backcolor="FFFFFFFF" borderstyle="0" borderwidth="2" bordercolor="FF000000" col="0" viewStyle="0" digit="8" timing="0" format="FAX {0}">
+        <edit>
+          <substitution file="file100" key="fax" />
+        </edit>
+      </printLabel>
+      <printLine id="printLine2" startX="288" startY="450" endX="238" endY="525" lineWidth="2" lineColor="FF000000" />
+      <printLine id="printLine3" startX="63" startY="425" endX="513" endY="525" lineWidth="2" lineColor="FF000000" />
+      <printLine id="printLine4" startX="63" startY="500" endX="513" endY="500" lineWidth="2" lineColor="FF000000" />
+      <printLine id="printLine5" startX="63" startY="632" endX="513" endY="632" lineWidth="2" lineColor="FF000000" />
+      <printLine id="printLine6" startX="63" startY="634" endX="513" endY="634" lineWidth="2" lineColor="FF000000" />
+
+      <printLine id="printLine8" startX="50" startY="256" endX="298" endY="256" lineWidth="2" lineColor="FF000000" />
+
+      <printRectangle id="printRectangle1" x="63" y="450" width="450" height="75" lineWidth="2" lineColor="FF000000" fillColor="FF000000" fill="0" hattch="0" />
+    </printPage>
+  </printing>
+  <infomation title="検針アプリ" id="f549137c78cf4fbe85239fb42cc5d059" version="0.0.1.0" editorVer="1.7.0.0" timeupdate="1" exit="0" />
+  <settings suspend="0">
+    <device bluetooth="1" wlan="0" touch="0" />
+    <ternimal activeBrighness="4" inactiveBrighness="1" volume="3" backlightTimeout="5" battTimeout="3" acTimeout="0" />
+  </settings>
+</root>
