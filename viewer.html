@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .musePage{position: relative;}
+        .museParts{position: absolute;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div id="main" class=".musePage" style="width:240px; height:320px; "></div>
+        <h2>{{hello}}</h2>
+        <input type="file" id="file-selector" accept=".kaml" @change="onLoadKaml" v-model="fileName">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="https://jp.vuejs.org/js/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                hello : "HELLO",
+                pages:[],
+                fileName: "",
+            },
+            methods: {
+                setKamlLayput: function(reader) {
+                    var knbase = document.getElementById("main");
+                    knbase.innerHTML = "";
+
+                    var doc = reader.result;
+
+                    var parser = new DOMParser();
+                    var xml = parser.parseFromString(doc, "application/xml");
+
+                    var nodes = xml.getElementsByTagName("layout");
+
+                    for(i = 0; i < nodes.length; i++) {
+                        var pages = nodes[i].getElementsByTagName("page");
+                        for(j = 0; j < pages.length; j++) {
+                            if(pages[j].getAttribute("id") == "page1") {
+                                knbase.insertAdjacentHTML("afterbegin", "<div id=\"" + pages[j].getAttribute("id") + "\" style=\"position:absolute; width:240px; height:320px; background-color:#" + pages[j].getAttribute("backcolor").substring(2, 8) + "\">");
+                                var page = document.getElementById(pages[j].getAttribute("id"));
+                                var labels = pages[j].getElementsByTagName("label");
+                                if(labels != null) {
+                                    for(n = 0; n < labels.length; n++) {
+                                        var label = document.createElement("div");
+                                        //label.setAttribute("class", ".museParts");
+                                        var style = "position:absolute; left:" + labels[n].getAttribute("x") + "px; top:" + labels[n].getAttribute("y") + "px; width:" + labels[n].getAttribute("width") + "px; height:" + labels[n].getAttribute("height") + "px; color:#" + labels[n].getAttribute("textcolor").substring(2, 8) + "; background-color:#" + labels[n].getAttribute("backcolor").substring(2, 8) + "; font-size:" + labels[n].getAttribute("textsize") + "px; "
+                                        switch(parseInt(labels[n].getAttribute("textalign"))) {
+                                            case 0x1:
+                                                style += "text-align: left; vertical-align: top; ";
+                                                break;
+                                            case 0x2:
+                                                style += "text-align: center; vertical-align: top; ";
+                                                break;
+                                            case 0x4:
+                                                style += "text-align: right; vertical-align: top; ";
+                                                break;
+                                            case 0x10:
+                                                style += "text-align: left; vertical-align: middle; ";
+                                                break;
+                                            case 0x20:
+                                                style += "text-align: center; vertical-align: middle; ";
+                                                break;
+                                            case 0x40:
+                                                style += "text-align: right; vertical-align: middle; ";
+                                                break;
+                                            case 0x100:
+                                                style += "text-align: left; vertical-align: bottom; ";
+                                                break;
+                                            case 0x200:
+                                                style += "text-align: right; vertical-align: bottom; ";
+                                                break;
+                                            case 0x400:
+                                                style += "text-align: right; vertical-align: bottom; ";
+                                                break;
+                                        }
+                                        if(parseInt(labels[n].getAttribute("borderwidth")) != 0) {
+                                            style += "border: " + labels[n].getAttribute("borderwidth") + "px solid #" + labels[n].getAttribute("bordercolor").substring(2, 8) + "; ";
+                                        }
+
+                                        label.setAttribute("style", style);
+
+                                        label.insertAdjacentText("afterbegin", labels[n].getAttribute("text"));
+                                        page.insertAdjacentElement("beforeend", label);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    var info = docelem.getElementsByTagName("infomation");
+                    var title = info[0].getAttribute("title");
+                    this.hello = title;//info[0].getAttribute("title");
+                },
+                
+                onLoadKaml: function(e) {
+                    if(window.File && window.FileReader && window.FileList && window.Blob) {
+                        var fileData = e.target.files[0];
+                        var reader = new FileReader();
+                        reader.onload = function() {
+                            var knbase = document.getElementById("main");
+                            knbase.innerHTML = "";
+
+                            var doc = reader.result;
+
+                            var parser = new DOMParser();
+                            var xml = parser.parseFromString(doc, "application/xml");
+
+                            var nodes = xml.getElementsByTagName("layout");
+
+                            for(i = 0; i < nodes.length; i++) {
+                                var pages = nodes[i].getElementsByTagName("page");
+                                for(j = 0; j < pages.length; j++) {
+                                    if(pages[j].getAttribute("id") == "page1") {
+                                        knbase.insertAdjacentHTML("afterbegin", "<div id=\"" + pages[j].getAttribute("id") + "\" style=\"position:absolute; width:240px; height:320px; background-color:#" + pages[j].getAttribute("backcolor").substring(2, 8) + "\">");
+                                        var page = document.getElementById(pages[j].getAttribute("id"));
+                                        var labels = pages[j].getElementsByTagName("label");
+                                        if(labels != null) {
+                                            for(n = 0; n < labels.length; n++) {
+                                                var label = document.createElement("div");
+                                                //label.setAttribute("class", ".museParts");
+                                                var style = "position:absolute; left:" + labels[n].getAttribute("x") + "px; top:" + labels[n].getAttribute("y") + "px; width:" + labels[n].getAttribute("width") + "px; height:" + labels[n].getAttribute("height") + "px; color:#" + labels[n].getAttribute("textcolor").substring(2, 8) + "; background-color:#" + labels[n].getAttribute("backcolor").substring(2, 8) + "; font-size:" + labels[n].getAttribute("textsize") + "px; "
+                                                switch(parseInt(labels[n].getAttribute("textalign"))) {
+                                                    case 0x1:
+                                                        style += "text-align: left; vertical-align: top; ";
+                                                        break;
+                                                    case 0x2:
+                                                        style += "text-align: center; vertical-align: top; ";
+                                                        break;
+                                                    case 0x4:
+                                                        style += "text-align: right; vertical-align: top; ";
+                                                        break;
+                                                    case 0x10:
+                                                        style += "text-align: left; vertical-align: middle; ";
+                                                        break;
+                                                    case 0x20:
+                                                        style += "text-align: center; vertical-align: middle; ";
+                                                        break;
+                                                    case 0x40:
+                                                        style += "text-align: right; vertical-align: middle; ";
+                                                        break;
+                                                    case 0x100:
+                                                        style += "text-align: left; vertical-align: bottom; ";
+                                                        break;
+                                                    case 0x200:
+                                                        style += "text-align: right; vertical-align: bottom; ";
+                                                        break;
+                                                    case 0x400:
+                                                        style += "text-align: right; vertical-align: bottom; ";
+                                                        break;
+                                                }
+                                                if(parseInt(labels[n].getAttribute("borderwidth")) != 0) {
+                                                    style += "border: " + labels[n].getAttribute("borderwidth") + "px solid #" + labels[n].getAttribute("bordercolor").substring(2, 8) + "; ";
+                                                }
+
+                                                label.setAttribute("style", style);
+
+                                                if(labels[n].getAttribute("text") != null) {
+                                                    label.insertAdjacentText("afterbegin", labels[n].getAttribute("text"));
+                                                }
+                                                page.insertAdjacentElement("beforeend", label);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            var info = docelem.getElementsByTagName("infomation");
+                            var title = info[0].getAttribute("title");
+                            this.hello = title;//info[0].getAttribute("title");
+                        };
+                        reader.readAsText(fileData, 'UTF-8');
+
+                    }
+                },
+            },
+            created: function() {
+                this.hello = "CREATED!!";
+                
+                var xmlHttp = new XMLHttpRequest();
+
+                xmlHttp.onreadystatechange = function() {
+                    if(xmlHttp.readyState == 4) {
+                        if(xmlHttp.status == 200) {
+                            //var knbase = $("#main");
+                            var docelem = xmlHttp.responseXML.documentElement;
+                            this.setKamlLayput(docelem);
+                        }
+                    }
+                }
+                xmlHttp.open("GET", "https://kntool.github.io/app/kntool.xml");
+                xmlHttp.send();
+            },
+        });
+    </script>
+</body>
+</html>
