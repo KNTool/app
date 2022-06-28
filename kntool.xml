@@ -37,10 +37,10 @@
         </check>
       </action>
       <label id="page1_title" system="0" x="0" y="0" width="240" height="28" text="メ ニ ュ ー" multiline="0" textsize="20" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
-      <label id="page1_label1" display="検針処理" system="0" x="10" y="54" width="220" height="28" text="R?：検針処理" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFFFF59D" borderstyle="1" borderwidth="1" bordercolor="FFFDD835" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label1" display="検針処理" system="0" x="10" y="54" width="220" height="28" text="R▶：検針処理" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFFFF59D" borderstyle="1" borderwidth="1" bordercolor="FFFDD835" col="0" viewStyle="0" digit="8" />
       <label id="page1_label2" display="設定" system="0" x="10" y="124" width="220" height="28" text="F1：設定" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFA5D6FF" borderstyle="1" borderwidth="1" bordercolor="FF3232FA" col="0" viewStyle="0" digit="8" />
       <label id="page1_label3" display="作業履歴" system="0" x="10" y="90" width="220" height="28" text="F2：検針履歴" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFC0FFC0" borderstyle="1" borderwidth="1" bordercolor="FF80FF80" col="0" viewStyle="0" digit="8" />
-      <label id="page1_label7" display="データ転送" system="0" x="10" y="162" width="220" height="28" text="?L：データ転送" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEF9A9A" borderstyle="1" borderwidth="1" bordercolor="FFE53935" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label7" display="データ転送" system="0" x="10" y="162" width="220" height="28" text="◀L：データ転送" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEF9A9A" borderstyle="1" borderwidth="1" bordercolor="FFE53935" col="0" viewStyle="0" digit="8" />
       <updateItem>
         <item id="page1_label1" />
         <item id="page1_label2" />
