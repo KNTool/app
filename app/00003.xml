@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <layout topPage="page1" backcolor="FFF0F0F0" arrow="1">
+    <page id="page1" display="トップページ" location="00000000" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result>
+            <success page="transferpage1" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="ﾃﾞｰﾀ" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="16" conditions="0">
+          <result>
+            <success page="page3" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="履 歴" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="16" conditions="0">
+          <result>
+            <success page="page2" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="棚 卸" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <textFiled id="page1_textbox1" common="page1_textbox1_common" display="担当者" index="1" x="10" y="44" input="4160" kim="0" width="220" height="68" textlimit="6" textsize="20" textstyle="0" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" clear="0" update="0" label="担当者">
+        <scanOption>
+          <scan trigger="autoOffEx" centerScan="false" timeout="5000" notification="all" />
+          <upca enable="true" />
+          <upce enable="true" />
+          <ean8 enable="true" />
+          <ean13 enable="true" />
+          <code128 enable="true" />
+          <gs1-128 enable="true" />
+          <code39 enable="true" digitNumberLimit="1-48" />
+          <code93 enable="false" digitNumberLimit="4-55" />
+          <itf enable="true" digitNumberLimit="14" />
+          <dtf enable="true" digitNumberLimit="12" />
+          <codabar enable="true" startStopCharacter="true" digitNumberLimit="3-55" />
+          <msiPlessey enable="false" digitNumberLimit="6-55" />
+          <gs1DataBar enable="true" />
+          <gs1DataBarLimited enable="true" />
+          <gs1DataBarExpanded enable="true" />
+          <gs1DataBarComposite enable="true" />
+          <qrCode enable="true" />
+          <microQRCode enable="true" />
+          <pdf417 enable="true" />
+          <microPDF417 enable="true" />
+          <maxicode enable="false" />
+          <dataMatrix enable="true" />
+          <ocr enableFormat="disable" />
+        </scanOption>
+      </textFiled>
+      <label id="page1_title" system="0" x="0" y="0" width="240" height="34" text="メ ニ ュ ー" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label1" display="棚卸しラベル" system="0" x="10" y="122" width="220" height="28" text="R▶：棚卸し" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFFFF59D" borderstyle="1" borderwidth="1" bordercolor="FFFDD835" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label2" display="作業履歴ラベル" system="0" x="10" y="160" width="220" height="28" text="F2：作業履歴" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFA5D6A7" borderstyle="1" borderwidth="1" bordercolor="FF43A047" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label3" display="データ送信ラベル" system="0" x="10" y="198" width="220" height="28" text="◀L：データ送信" multiline="0" textsize="20" textcolor="FF000000" textstyle="1" textalign="16" backcolor="FFEF9A9A" borderstyle="1" borderwidth="1" bordercolor="FFE53935" col="0" viewStyle="0" digit="8" />
+      <label id="page1_label4" display="バージョン情報ラベル" system="5" x="10" y="236" width="220" height="17" multiline="0" textsize="12" textcolor="FF000000" textstyle="0" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" format="Ver.{0}" viewStyle="0" digit="8" />
+      <updateItem>
+        <item id="page1_label1" />
+        <item id="page1_label2" />
+        <item id="page1_label3" />
+        <item id="page1_label4" />
+        <item id="page1_textbox1" />
+      </updateItem>
+    </page>
+    <page id="page2" display="棚卸しページ" location="03530000" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result>
+            <success page="page1" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="ﾒﾆｭｰ" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="0" conditions="0">
+          <keyLabel hide="1" text="F1" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="16" conditions="0">
+          <result>
+            <success page="page3" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="履 歴" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="1040" option="key4_action" conditions="0">
+          <result>
+            <success page="page2" result="0" error="0" success="0" />
+            <fail page="page2" buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="登 録" textsize="12" labelsize="0" />
+        </key>
+        <textBoxEnd textboxend="2" end="0" action="0" key="0" vk="133" />
+        <check>
+          <item conditions="0" id="key4_action" name="page2-key4_check1" display="入力済みチェック" check="1" search="0" col="0" outputcol="0" length="0" min="0" max="0" />
+        </check>
+      </action>
+      <data>
+        <output id="key4_action" name="page2-key4_data1" display="棚卸しデータ保存" file="file1">
+          <item type="date" format="yyyy/MM/dd" col="0" search="0" index="1" />
+          <item type="time" format="HH:mm:ss" col="0" search="0" index="2" />
+          <item type="serialid" format="" col="0" search="0" index="3" />
+          <item type="text" id="page1_textbox1_common" col="0" search="0" index="4" />
+          <item type="text" id="page2_textbox1_common" col="0" search="0" index="5" />
+          <item type="text" id="page2_textbox2_common" col="0" search="0" index="6" />
+        </output>
+      </data>
+      <textFiled id="page2_textbox1" common="page2_textbox1_common" display="品番" index="1" x="10" y="44" input="4192" kim="0" width="220" height="68" textlimit="0" textsize="20" textstyle="0" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" clear="0" update="0" label="品番">
+        <scanOption>
+          <scan trigger="autoOffEx" centerScan="false" timeout="5000" notification="all" />
+          <upca enable="true" />
+          <upce enable="true" />
+          <ean8 enable="true" />
+          <ean13 enable="true" />
+          <code128 enable="true" />
+          <gs1-128 enable="true" />
+          <code39 enable="true" digitNumberLimit="1-48" />
+          <code93 enable="false" digitNumberLimit="4-55" />
+          <itf enable="true" digitNumberLimit="14" />
+          <dtf enable="true" digitNumberLimit="12" />
+          <codabar enable="true" startStopCharacter="true" digitNumberLimit="3-55" />
+          <msiPlessey enable="false" digitNumberLimit="6-55" />
+          <gs1DataBar enable="true" />
+          <gs1DataBarLimited enable="true" />
+          <gs1DataBarExpanded enable="true" />
+          <gs1DataBarComposite enable="true" />
+          <qrCode enable="true" />
+          <microQRCode enable="true" />
+          <pdf417 enable="true" />
+          <microPDF417 enable="true" />
+          <maxicode enable="false" />
+          <dataMatrix enable="true" />
+          <ocr enableFormat="disable" />
+        </scanOption>
+      </textFiled>
+      <textFiled id="page2_textbox2" common="page2_textbox2_common" display="数量" index="2" x="10" y="122" input="64" kim="0" width="100" height="68" textlimit="3" textsize="20" textstyle="0" textcolor="FF757575" backcolor="FF212121" activebackcolor="FF0277BD" activetextcolor="FF000000" clear="0" update="0" label="数量" />
+      <label id="page2_title" system="0" x="0" y="0" width="240" height="34" text="棚 卸 し" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF212121" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="8" />
+      <updateItem>
+        <item id="page2_textbox1" />
+        <item id="page2_textbox2" />
+      </updateItem>
+    </page>
+    <page id="transferpage1" display="データ転送ページ1" location="005601E3" minimum="0" type="1" showKeyInfo="1">
+      <data>
+        <fileTransfer name="winusb">
+          <result>
+            <success page="page1" result="1" error="0" success="0" />
+            <fail page="page1" result="1" error="0" success="0" />
+          </result>
+          <item path="workdata" delete="1" type="0" marge="1" />
+        </fileTransfer>
+      </data>
+    </page>
+    <page id="page3" display="一覧履歴ページ" location="019F0152" minimum="0" backcolor="FFEEEEEE" type="4097" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result>
+            <success page="page1" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="ﾒﾆｭｰ" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="16" conditions="0">
+          <result>
+            <success page="page4" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="個 別" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="16" conditions="0">
+          <result>
+            <success page="page3_delete_page" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="削 除" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <label id="page3_title" system="0" x="0" y="0" width="240" height="34" text="履 歴 表 示" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF202020" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+      <label id="page3_lable1" system="15" x="10" y="44" width="220" height="20" multiline="0" textsize="14" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" file="file1" col="0" viewStyle="0" digit="0" />
+      <listView id="page3_listview1" index="1" common="page3_listview1_common" col="0" taboder="0" x="10" y="64" width="220" height="192" textsize="14" backcolor="FFFFFFFF" headercolor="FF4FC3F7" file="file1" noheader="0" active="1">
+        <item text="品番" toNumber="0" textalign="0" width="150" col="5" system="0" noline="0" />
+        <item text="数量" toNumber="0" textalign="0" width="60" col="6" system="0" noline="0" />
+      </listView>
+      <updateItem>
+        <item id="page3_lable1" />
+      </updateItem>
+    </page>
+    <page id="page3_delete_page" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result>
+            <success page="page3" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="いいえ" textsize="12" labelsize="1" />
+        </key>
+        <key vk="133" action="1048592" option="key4_action" conditions="0">
+          <result>
+            <success page="page3" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="は い" textsize="12" labelsize="1" />
+        </key>
+      </action>
+      <data>
+        <delete id="key4_action" file="file1" type="3">
+          <item common="page3_delete_page_listview1_common" col="0" row="-1" />
+        </delete>
+      </data>
+      <label id="" system="0" x="10" y="50" width="220" height="30" text="選択している" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="32" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+      <label id="" system="0" x="10" y="80" width="220" height="30" text="データを削除しますか？" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="32" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+    </page>
+    <page id="page4" display="個別履歴ページ" location="03060152" minimum="0" backcolor="FFEEEEEE" type="4096" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result>
+            <success page="page3" result="0" error="0" success="0" />
+            <fail buzzer="error" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="一 覧" textsize="12" labelsize="0" />
+        </key>
+        <key vk="112" action="8" conditions="0">
+          <keyLabel hide="0" text="＜" textsize="12" labelsize="0" />
+        </key>
+        <key vk="113" action="4" conditions="0">
+          <keyLabel hide="0" text="＞" textsize="12" labelsize="0" />
+        </key>
+        <key vk="133" action="16" conditions="0">
+          <result>
+            <success page="page4_delete_page" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="削 除" textsize="12" labelsize="0" />
+        </key>
+      </action>
+      <label id="page4_title" system="0" x="0" y="0" width="240" height="34" text="履 歴 表 示" multiline="0" textsize="24" textcolor="FFE0E0E0" textstyle="1" textalign="32" backcolor="FF202020" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+      <label id="page4_lable1" system="11" x="10" y="44" width="220" height="20" multiline="0" textsize="14" textcolor="FF000000" textstyle="1" textalign="64" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+      <dataGrid id="page4_dataGrid1" common="page4_dataGrid1_common" index="1" taboder="0" x="10" y="64" width="220" height="192" textsize="14" backcolor="FFEEEEEE" file="file1" noheader="1" multiline="0" split="0">
+        <header index="1" text="項目" width="70" />
+        <header index="2" text="データ" width="145" />
+        <item col="1" filed="日付" />
+        <item col="2" filed="時刻" />
+        <item col="5" filed="品番" />
+        <item col="6" filed="数量" />
+      </dataGrid>
+      <updateItem>
+        <item id="page4_lable1" />
+        <item id="page4_dataGrid1_common" />
+      </updateItem>
+    </page>
+    <page id="page4_delete_page" minimum="0" backcolor="FFEEEEEE" type="0" showKeyInfo="1">
+      <action>
+        <key vk="132" action="16" conditions="0">
+          <result>
+            <success page="page4" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="いいえ" textsize="12" labelsize="1" />
+        </key>
+        <key vk="133" action="1048592" option="key4_action" conditions="0">
+          <result>
+            <success page="page4" result="0" error="0" success="0" />
+          </result>
+          <keyLabel hide="0" text="は い" textsize="12" labelsize="1" />
+        </key>
+      </action>
+      <data>
+        <delete id="key4_action" file="file1" type="3">
+          <item common="page4_delete_page_dataGrid1_common" col="0" row="-1" />
+        </delete>
+      </data>
+      <label id="" system="0" x="10" y="50" width="220" height="30" text="選択している" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="32" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+      <label id="" system="0" x="10" y="80" width="220" height="30" text="データを削除しますか？" multiline="0" textsize="16" textcolor="FF000000" textstyle="1" textalign="32" backcolor="FFEEEEEE" borderstyle="0" borderwidth="0" col="0" viewStyle="0" digit="0" />
+    </page>
+  </layout>
+  <control>
+    <buzzer name="error" display="エラー音" freq="0" count="3" ontime="100" offtime="100" />
+    <buzzer name="success" display="成功音" freq="7" count="1" ontime="200" offtime="0" />
+    <file name="file1" display="棚卸しデータ" file="workdata\$Date_棚卸しデータ.csv" mirroring="0" type="0" split="0" encode="0" import="0">
+      <header>
+        <item text="日付" index="1" />
+        <item text="時刻" index="2" />
+        <item text="端末ID" index="3" />
+        <item text="担当者" index="4" />
+        <item text="品番" index="5" />
+        <item text="数量" index="6" />
+      </header>
+    </file>
+    <path name="workdata" display="作業フォルダ" path="workdata" mirroring="0" />
+    <path name="master" display="マスタフォルダ" path="master" mirroring="0" />
+    <tran name="winusb" progress="1" syncClock="1" />
+    <folder name=".">
+      <folder name="workdata" />
+      <folder name="master" />
+    </folder>
+  </control>
+  <printing>
+    <printer name="bp100" printer="BP-100" pin="1910" timeout="30" buzzer="1" feed="0" />
+  </printing>
+  <infomation title="棚卸しアプリ" version="1.0.4.2" editorVer="1.6.0.0" timeupdate="1" exit="0" />
+  <settings suspend="0">
+    <device bluetooth="0" wlan="0" touch="0" />
+    <ternimal activeBrighness="4" inactiveBrighness="1" volume="3" backlightTimeout="5" battTimeout="3" acTimeout="0" />
+  </settings>
+</root>
